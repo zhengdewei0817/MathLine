@@ -1,12 +1,19 @@
 # MathLine
+
 此项目作用为输入公式  则可以直接生产公式的图像
 
 基本原理：
+
 通过创建svg中的path标签并更改d属性  达到绘制图像的目的
+
 输入公式的要求：
+
   sin  cos  tan  atan acos  asin   pow  abs  可用
+  
   例如 y=a*sin（x*Math.PI/2）+b  
+  
   a,b都为变量，可在变量公式的配置中确定
+  
   乘以Math.PI/2  是因为需要角度换成弧度
   
   
@@ -16,9 +23,13 @@
 
 
 使用说明：
+
 在zdwconfig中进行修改
+
+
 win.zdwconfig = {
 		//舞台信息
+		
 		stageinfo:{
 			svgWidth:"1000",//svg的宽度
 			svgHeight:"600",//svg的高度
@@ -31,6 +42,7 @@ win.zdwconfig = {
 			PointSize:"1px",//背景间距点的半径var
 			SVGName:"zdwsvg",//svg的id
 		},
+		
 		//刻度尺信息
 		ruleinfo:{
 			top:"30",//刻度尺容器顶部距离
@@ -60,9 +72,11 @@ win.zdwconfig = {
 			isAddNewlenAxisTxt:true,//是否添加新的文本刻度
 			NewlenAxis:[{txt:"π",x:"20",y:"120"}],//纵坐标刻度添加的文字信息，包括内容，x，y
 		},
+		
 		/**
 		 * 这里是绘制具体线条
 		 */
+
 		drawLine:{
 			line:[
 				[
@@ -74,6 +88,7 @@ win.zdwconfig = {
 						non:[2,3],//默认值  无效了  都默认采用最小值
 					}
 				],
+				
 				[
 					{
 						color:"#ffffff",//线条颜色
@@ -84,12 +99,15 @@ win.zdwconfig = {
 					}
 				],
 				
+				
 			]
 		},
+		
 		/**
 		 * 文字说明
 		 * 生成公式的组件
 		 */
+
 		textFile:{
 			txt:[
 				[
@@ -106,6 +124,7 @@ win.zdwconfig = {
 						tagetexpression:0,//目标公式
 					}
 				],
+				
 				[
 					{
 						width:"200",//宽度
@@ -122,9 +141,11 @@ win.zdwconfig = {
 				]
 			]
 		},
+		
 		/**
 		 * 滚动条
 		 */
+
 		scrollbarD:{
 			scr:[
 				[
