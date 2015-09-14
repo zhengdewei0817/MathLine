@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SVG foreignObject test</title>
+    <style>
+      div {display:block;color:black;padding:3px;}
+    </style>
+
+  </head>
+<body>
+  <h1>foreignObject demo</h1>
+  <svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="50" cy="50" r="40" stroke="blue" stroke-width="4" fill="red"></circle>
+      <foreignObject x="100" y="25" width="250" height="50">
+        <!--<body xmlns="http://www.w3.org/1999/xhtml">-->
+          <div xmlns="http://www.w3.org/1999/xhtml">This is a div nestled between a circle and a rectangle drawn in SVG. </div>
+        <!--</body>-->
+      </foreignObject>    
+    <rect x="100" y="100" width="300" height="100" stroke-width="4" fill="blue" stroke="red" ></rect>
+  </svg>
+</body>
+
+
+<script>
+	window.addEventListener("mousemove",function(){
+		console.log("-------"+Math.random())
+	})
+	
+	window.addEventListener("mousemove",function(){
+		console.log("+++++++++")
+	})
+	
+	window.attachEvent("onmousemove",function(){
+		console.log("-=-=-=-=-=")
+	})
+	
+	
+	
+</script>
+
+</html> 
